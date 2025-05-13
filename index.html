@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Diary To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page">
+    <h1>📓 My Daily Tasks</h1>
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Write a task..." />
+      <button id="addTaskButton">Add</button>
+    </div>
+    <ul id="taskListContainer"></ul>
+    
+    <!-- Delete All Tasks Button -->
+    <div class="delete-button-container">
+      <button id="deleteAllTasksButton">Delete All Tasks</button>
+    </div>
+  </div>
+
+  <!-- Congrats Popup -->
+  <div id="congratsPopup" class="hidden">
+    <div class="popup-content">
+      <h2>🎉 Congratulations!</h2>
+      <p>You completed all your tasks for the day!</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Popup -->
+  <div id="deleteConfirmPopup" class="hidden">
+    <div class="popup-content">
+      <h2>❗ Are you sure?</h2>
+      <p>This will delete all your tasks.</p>
+      <button onclick="confirmDelete()">Yes, Delete All</button>
+      <button onclick="closeDeletePopup()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

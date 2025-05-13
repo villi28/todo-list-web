@@ -1,0 +1,158 @@
+body {
+    font-family: 'Georgia', serif;
+    background: repeating-linear-gradient(to bottom, #fdfdfd, #fdfdfd 40px, #f3f3f3 41px);
+    background-color: #fff8f0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .page {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #caa472;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 32px;
+    color: #5b3c23;
+  }
+  
+  .task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  
+  button {
+    padding: 10px 16px;
+    background-color: #caa472;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  ul#taskListContainer {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #taskListContainer li {
+    background: #fffaf3;
+    border: 1px solid #e2d3c5;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    transition: background 0.3s;
+  }
+  
+  #taskListContainer li.completed {
+    background-color: #d4f8d4;
+  }
+  
+  .task-text.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .checkmark {
+    font-size: 20px;
+    color: green;
+  }
+  
+  /* Delete Button Styling */
+  .delete-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #deleteAllTasksButton {
+    padding: 12px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #deleteAllTasksButton:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Popup Styles */
+  #congratsPopup, #deleteConfirmPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);  /* Darker background for pop-ups */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #congratsPopup.hidden, #deleteConfirmPopup.hidden {
+    display: none;
+  }
+  
+  .popup-content {
+    background: #fff9e6; /* Light yellow background to resemble a diary page */
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid #d4a17e; /* Matching the diary theme */
+  }
+  
+  .popup-content h2 {
+    margin-top: 0;
+    font-size: 26px;
+    font-family: 'Indie Flower', cursive;
+    color: #5b3c23; /* Dark brown text, like ink on paper */
+  }
+  
+  .popup-content p {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #3e2a1f; /* Soft brown color */
+  }
+  
+  .popup-content button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #caa472;  /* Diary-like tan color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+  }
+  
+  .popup-content button:hover {
+    background-color: #b08a57;
+  }
+  
